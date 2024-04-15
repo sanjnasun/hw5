@@ -16,13 +16,27 @@ using namespace std;
 
 
 // Definition of primary wordle function
-std::set<std::string> wordle(
-    const std::string& in,
-    const std::string& floating,
-    const std::set<std::string>& dict)
+std::set<std::string> wordle(const std::string& in, const std::string& floating, const std::set<std::string>& dict)
 {
     // Add your code here
 
 }
 
+
+
+
+
+
+
+
 // Define any helper functions here
+bool validWord(const std::string& input, const std::set<std::string>& dict)
+{
+  std::set<string>::iterator it = dict.find(input);
+  if(it != dict.end())
+  return true;
+
+  return false;
+}
+
+
