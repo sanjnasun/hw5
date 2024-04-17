@@ -26,6 +26,6 @@ std::set<std::string> wordle(
     const std::set<std::string>& dict);
 
 
-bool validWord(std::string& input, std::set<std::string>& dict);
-
+bool validWord(const std::string& input, const std::set<std::string>& dict);
+void newCombo(const std::string& current, const std::string& in, const std::set<std::string>& dict, size_t i, const std::string& floating, std::set<std::string>& finalString, int dashCount);
 #endif
