@@ -66,12 +66,7 @@ bool schedule(const AvailabilityMatrix& avail, const size_t dailyNeed, const siz
     }
     sched.clear();
 
-      std::vector<size_t> shifts(avail[0].size());
-      size_t i = 0;
-      while (i < shifts.size()) {
-          shifts[i] = 0;
-          ++i;
-      }
+      std::vector<size_t> shifts(avail[0].size(), 0);
 
 
       sched.resize(avail.size());
