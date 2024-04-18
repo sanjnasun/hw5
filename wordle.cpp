@@ -83,8 +83,7 @@ void newCombo(const std::string& current, const std::string& input, const std::s
 
     else {
       for (char c = 'a'; c <= 'z'; ++c) {
-          //bool foundInFloating = false;
-          
+     
             std::string newFloating = floating;
               if(floating.find(c)!=string::npos) 
               { 
@@ -100,12 +99,6 @@ void newCombo(const std::string& current, const std::string& input, const std::s
               newCombo(newCurrent, input, dict, i + 1, newFloating, finalString, dashCount - 1);
               //   break;
 
-
-          // else {
-          //     std::string newCurrent = current;
-          //     newCurrent[i] = floating[c];
-          //     newCombo(current, input, dict, i + 1, floating, finalString, dashCount-1);
-          // }
 
         
 

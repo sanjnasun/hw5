@@ -31,11 +31,9 @@ typedef std::vector<std::vector<Worker_T> > DailySchedule;
  * @return true if a solution exists; sched contains the solution
  * @return false if no solution exists; sched is undefined (can be anything)
  */
-bool schedule(
-    const AvailabilityMatrix& avail,
-    const size_t dailyNeed,
-    const size_t maxShifts,
-    DailySchedule& sched
-);
-
+bool schedule(const AvailabilityMatrix& avail, const size_t dailyNeed, const size_t maxShifts, DailySchedule& sched);
+bool scheduleHelper(const AvailabilityMatrix& available, const size_t workNeed, const size_t total, DailySchedule& sched, size_t m, std::vector<size_t>& when);
+bool scheduled(const std::vector<Worker_T>& schedule, Worker_T worker);
+bool limit(const AvailabilityMatrix& available, const std::vector<size_t>& shifts, size_t day, Worker_T worker, size_t maxShifts);
+bool fully(const DailySchedule& sched, size_t day, size_t dailyNeed);
 #endif
