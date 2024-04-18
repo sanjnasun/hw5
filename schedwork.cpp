@@ -85,23 +85,6 @@ bool schedule(const AvailabilityMatrix& avail, const size_t dailyNeed, const siz
 
 
 
-// bool is_valid(Worker_T worker, const AvailabilityMatrix& avail, const size_t maxShifts, size_t day) { //checks if the worker is valid
-//     if (avail[day][worker]) {
-//         size_t shiftsWorked = 0;
-//         for (const auto& dayAvailability : avail) {
-//             if (dayAvailability[worker]) {
-//                 shiftsWorked++;
-//             }
-//         }
-//         if (shiftsWorked > maxShifts) {
-//             return false;
-//         }
-//         return true;
-//     }
-//     return false;
-// }
-
-
 bool scheduled(const std::vector<Worker_T>& schedule, Worker_T worker) {
     for (Worker_T scheduledWorker : schedule) {
         if (scheduledWorker == worker) {
